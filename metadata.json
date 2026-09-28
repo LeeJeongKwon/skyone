@@ -1,0 +1,6 @@
+{
+  "name": "천명원(天命院) - 사주·관상·풍수·작명 종합 운명학 솔루션",
+  "description": "사주명리, 관상 분석, 풍수지리, 택일, 작명, 소원성취 부적, 주역 및 타로를 아우르는 종합 운명학 비책 시스템. 자체 역학 알고리즘과 AI 심층 분석, 실시간 알림, 히스토리 및 API 설정 백업을 지원합니다.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

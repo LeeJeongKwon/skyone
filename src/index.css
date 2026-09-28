@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  html.dark body {
+    background-color: #070a10;
+    color: #e2e8f0;
+  }
+
+  .font-serif-kr {
+    font-family: 'Noto Serif KR', serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.03); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes coinTumble {
+  0% { transform: translateY(0) rotateX(0deg) rotateY(0deg) scale(1); }
+  30% { transform: translateY(-45px) rotateX(540deg) rotateY(270deg) scale(1.15); }
+  70% { transform: translateY(-15px) rotateX(1080deg) rotateY(540deg) scale(1.05); }
+  90% { transform: translateY(3px) rotateX(1260deg) rotateY(630deg) scale(0.98); }
+  100% { transform: translateY(0) rotateX(1440deg) rotateY(720deg) scale(1); }
+}
+
+.animate-coin-tumble {
+  animation: coinTumble 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
